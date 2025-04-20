@@ -6,6 +6,7 @@ import { Geist } from "next/font/google";
 
 // Components
 import LayoutProgressBar from "@/components/LayoutProgressBar";
+import Header from "@/components/Header";
 
 // Fonts
 const geistSans = Geist({
@@ -24,8 +25,16 @@ const RootLayout = ({ children }) => {
   return (
     <html lang="uz">
       <body className={`${geistSans.variable} antialiased`}>
+        {/* Layout progress animation */}
         <LayoutProgressBar />
+
+        {/* Header */}
+        <Header />
+
+        {/* Main content */}
         {children}
+
+        {/* Footer */}
       </body>
     </html>
   );
