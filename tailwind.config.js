@@ -61,12 +61,20 @@ module.exports = {
           5: "hsl(var(--chart-5))",
         },
       },
+
+      backgroundImage: {
+        "hero-pattern": "url('../assets/backgrounds/beams.jpg')",
+        "hero-pattern-dark": "none",
+      },
+
       fontFamily: {
         geist: ["Geist", "sans-serif"],
       },
+
       maxWidth: {
         base: "1280px",
       },
+
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",

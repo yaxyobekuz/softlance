@@ -1,4 +1,4 @@
-import React from "react";
+"use client";
 import Link from "next/link";
 
 // Components
@@ -7,11 +7,11 @@ import ThemeButton from "./ThemeButton";
 
 const Header = () => {
   return (
-    <header className="h-16">
+    <header className="h-20">
       <div className="container h-full">
         <div className="flex items-center justify-between h-full">
           {/* Logo */}
-          <Logo />
+          <Link href="/" children={<Logo />} />
 
           <div className="flex items-center gap-8">
             {/* Navbar */}
