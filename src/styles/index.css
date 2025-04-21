@@ -31,6 +31,11 @@
     --radius: 0.5rem;
   }
 
+  html,
+  body {
+    @apply scroll-smooth;
+  }
+
   body {
     @apply bg-brand-light font-geist text-brand-dark font-normal text-base transition-colors duration-200 dark:bg-dark-mode-primary-default dark:text-white;
   }
@@ -60,6 +65,20 @@
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
+  }
+
+  @keyframes custom-animate-bounce {
+    0%,
+    100% {
+      transform: none;
+    }
+    50% {
+      transform: translateY(16px);
+    }
+  }
+
+  .custom-animate-bounce {
+    animation: custom-animate-bounce 3.5s infinite ease-out;
   }
 }
 

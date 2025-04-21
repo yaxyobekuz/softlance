@@ -30,7 +30,7 @@ const Header = () => {
                 {/* About */}
                 <li>
                   <Link
-                    href="/"
+                    href="/about"
                     className="text-nowrap shrink-0 transition-colors duration-200 hover:text-brand-default/70 dark:text-white/70 dark:hover:text-white"
                   >
                     Jamoa haqida
@@ -40,27 +40,37 @@ const Header = () => {
                 {/* Services */}
                 <li>
                   <Link
-                    href="/"
+                    href="/services"
                     className="text-nowrap shrink-0 transition-colors duration-200 hover:text-brand-default/70 dark:text-white/70 dark:hover:text-white"
                   >
                     Xizmatlar
                   </Link>
                 </li>
 
-                {/* Prices */}
+                {/* Pricing */}
                 <li>
                   <Link
-                    href="/"
+                    href="/pricing"
                     className="text-nowrap shrink-0 transition-colors duration-200 hover:text-brand-default/70 dark:text-white/70 dark:hover:text-white"
                   >
                     Narxlar
                   </Link>
                 </li>
 
+                {/* Projects */}
+                <li>
+                  <Link
+                    href="/projects"
+                    className="text-nowrap shrink-0 transition-colors duration-200 hover:text-brand-default/70 dark:text-white/70 dark:hover:text-white"
+                  >
+                    Loyihalar
+                  </Link>
+                </li>
+
                 {/* Contact */}
                 <li>
                   <Link
-                    href="/"
+                    href="/contact"
                     className="text-nowrap shrink-0 transition-colors duration-200 hover:text-brand-default/70 dark:text-white/70 dark:hover:text-white"
                   >
                     Bog'lanish
