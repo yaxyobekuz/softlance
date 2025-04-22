@@ -1,6 +1,9 @@
 import Link from "next/link";
 
-import Icon from "@/components/Icon";
+// Images
+import Image from "next/image";
+import devs1Img from "../assets/backgrounds/devs-1.jpg";
+import devs2Img from "../assets/backgrounds/devs-2.jpg";
 
 const Home = () => {
   return (
@@ -98,11 +101,124 @@ const Home = () => {
       </div>
 
       {/* About */}
-      <div id="about" className="py-24">
+      <section id="about" className="py-24">
         <div className="container">
-          <div className="grid grid-cols-2 gap-8"></div>
+          <div className="grid grid-cols-2 gap-8">
+            {/* Left */}
+            <div className="space-y-5">
+              {/* Top */}
+              <div className="flex gap-5">
+                <Image
+                  width={160}
+                  height={160}
+                  src={devs1Img}
+                  alt="Softlance dasturchilari (Rasm 1)"
+                  className="w-full h-60 bg-white col-span-2 object-cover rounded-2xl"
+                />
+
+                <div className="flex flex-col items-center justify-center gap-3.5 size-60 aspect-square bg-gradient-to-b from-white to-dark-mode-primary-default/5 rounded-2xl text-dark-mode-primary-light dark:to-white/5">
+                  <b className="text-5xl font-semibold">4yil+</b>
+                  <p className="text-xl text-center">
+                    Tajribaga ega <br />
+                    professionallar
+                  </p>
+                </div>
+              </div>
+
+              {/* Down */}
+              <div className="flex gap-5">
+                <div className="flex flex-col items-center justify-center gap-3.5 size-60 aspect-square bg-gradient-to-b from-brand-default to-[#002199] text-white rounded-2xl">
+                  <b className="text-5xl font-semibold">10+</b>
+                  <p className="text-xl text-center">
+                    Aktiv jamoa <br /> a'zolari
+                  </p>
+                </div>
+
+                <Image
+                  width={160}
+                  height={160}
+                  src={devs2Img}
+                  alt="Softlance dasturchilari (Rasm 2)"
+                  className="w-full h-60 bg-white col-span-2 object-cover rounded-2xl"
+                />
+              </div>
+            </div>
+
+            {/* Right */}
+            <div className="flex flex-col justify-center items-start gap-6">
+              {/* Section title */}
+              <h2 className="flex items-center gap-2 text-[26px] font-medium text-brand-default before:content-[''] before:w-[3px] before:h-6 before:bg-brand-default">
+                Jamoa maqsadi
+              </h2>
+
+              {/* Subtitle */}
+              <p className="text-5xl leading-tight font-semibold">
+                Biz mijozlar manfaatini <br /> birinchi o'ringa qo'yamiz.
+              </p>
+
+              {/* Description */}
+              <p className="max-w-2xl text-xl leading-8 text-brand-dark/70 dark:text-white/70">
+                Avval mijoz manfaatlari so'ngra bizning manfaatlarimiz shiori
+                ostida bizning jamoamiz biznesingiz muammolariga zamonaviy
+                uslubda samarali va innovatsion yechimlar taklif etadi.
+              </p>
+
+              {/* Buttons */}
+              <div className="flex gap-5">
+                {/* Services */}
+                <Link
+                  href="/services"
+                  className="flex items-center justify-center gap-3 min-w-56 bg-gradient-to-r from-brand-default to-brand-default-dark py-2 px-5 rounded-lg text-white transition-colors duration-200 hover:to-brand-default dark:hover:to-brand-default-dark"
+                >
+                  <span className="text-lg font-medium transition-colors duration-200">
+                    Barcha xizmatlar
+                  </span>
+
+                  <svg
+                    fill="none"
+                    strokeWidth="1.5"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="size-[26px] transition-colors duration-200"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M13.5 16.875h3.375m0 0h3.375m-3.375 0V13.5m0 3.375v3.375M6 10.5h2.25a2.25 2.25 0 0 0 2.25-2.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v2.25A2.25 2.25 0 0 0 6 10.5Zm0 9.75h2.25A2.25 2.25 0 0 0 10.5 18v-2.25a2.25 2.25 0 0 0-2.25-2.25H6a2.25 2.25 0 0 0-2.25 2.25V18A2.25 2.25 0 0 0 6 20.25Zm9.75-9.75H18a2.25 2.25 0 0 0 2.25-2.25V6A2.25 2.25 0 0 0 18 3.75h-2.25A2.25 2.25 0 0 0 13.5 6v2.25a2.25 2.25 0 0 0 2.25 2.25Z"
+                    />
+                  </svg>
+                </Link>
+
+                {/* About */}
+                <Link
+                  href="/about"
+                  className="flex items-center justify-center gap-3 min-w-56 py-2 px-5 border-2 border-brand-default rounded-lg text-brand-default transition-colors duration-200 hover:bg-brand-default/10 dark:hover:bg-white/10 dark:border-white dark:text-white"
+                >
+                  <span className="text-lg font-medium transition-colors duration-200">
+                    Ba'tafsil o'qish
+                  </span>
+
+                  <svg
+                    fill="none"
+                    strokeWidth={1.5}
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="size-[26px] transition-colors duration-200"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+                    />
+                  </svg>
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };
